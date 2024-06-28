@@ -53,7 +53,7 @@ func (b *BaseCloudinaryStuct) UploadFile(filePath string, publicName string) (Up
 	timestamp := fmt.Sprintf("%d", time.Now().Unix())
 	params := map[string]string{
 		"timestamp": timestamp,
-		//"public_id": publicName,
+		"public_id": publicName,
 	}
 	sortedParams := sortParams(params) + b.ApiSecret
 
